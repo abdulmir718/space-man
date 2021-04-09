@@ -1,0 +1,20 @@
+body {
+    background-color: aqua;
+    text-align: center;
+}
+
+#all-letters {
+    list-style: none;
+    display: inline-block;
+    border: solid 2px black;
+    padding:10px 10px 10px 10px;
+    width:20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15%;
+    font-size: 1.25rem;
+    
+    
+
+}
