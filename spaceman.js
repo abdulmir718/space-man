@@ -1,32 +1,3 @@
-//grabbing elements
-
-
-
-
-//ceating alphabet rrray
-const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
-// creating alphabet unordered list
-const letterButtons = () => {
-    
-    alphabetButtons =
-    document.querySelector(".alphabet-buttons");alphabetLetters = 
-    document.createElement("ul");
-
-    for(let i = 0; i < alphabet.length; i++) {
-        alphabetLetters.id = "alphabet";
-        createList = 
-        document.createElement("li");
-        createList.id = "all-letters";
-        createList.innerHTML = alphabet[i];
-        alphabetButtons.appendChild(alphabetLetters);
-        alphabetLetters.appendChild(createList);
-
-    }
-    
-}
-letterButtons();
-
 //word bank array
 
 wordBank = ["PRESIDENT", "BIGFOOT", "NOTEBOOK", "JAPAN", "NEPTUNE", "DRAKE", "GOLDFISH", "PANCAKE", "CHESS", "SHEEP", "GHOST", "TOOTHBRUSH", "GRANDFATHER", "BASEBALL", "MANUFACTURER", "MONA-LISA", "SWITZERLAND", "PAELLA", "VOLKSWAGEN", "HARPSICHORD"];
@@ -43,3 +14,35 @@ let selectRandomWord = () => {
 
 console.log(randomWord);
 selectRandomWord();
+
+let dashes = ""
+for (i=0;i<randomWord.length;i++) {
+  dashes += " _ ";
+  let blanks = document.querySelector("#guessWordText");
+  blanks.innerHTML = dashes;
+}
+
+//need figure out what button the user has selected
+let chances = 10 
+while (chances >= 0) {
+    const letterButtons = (str, char) => {
+      ans = []
+      for (i=0; i < str.length; i++) {
+          if (str[i] == char) {
+            ans.push(i)
+        }
+      }
+      return ans
+    }
+let result = letterButtons (randomWord, "C") 
+    if (result === []) {
+        chances--
+    }
+    else {for (i=0;i<result.length;i++) {
+        dashes[result[i]] = inputChar
+      }}
+
+}
+
+
+
