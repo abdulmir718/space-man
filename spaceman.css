@@ -52,6 +52,10 @@ h2 {
     text-align: center;
     transition: all .2s;
     cursor: pointer;
+    /* position: absolute; */
+    bottom: 0;
+    width: 6%;
+    height: 2.5rem;   
     
     
   }
@@ -60,7 +64,7 @@ h2 {
   }
 
   #hint, #replay {
-    display: inline-block;
+    display: inline;
     padding: .35em 1.2em;
     margin: 0 .3em .3em 0;
     border-radius: 2em;
@@ -73,17 +77,21 @@ h2 {
     text-align: center;
     transition: all .2s;
     cursor: pointer;
+    width: 7%;
+    height: 3rem; 
 
   }
   #hint, #replay:hover {
     background: linear-gradient(90deg, rgb(7, 161, 245), rgb(16, 16, 191) 35%, rgb(11, 0, 37) 100%);
-    }
+     
+}
+
   
   footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 7rem;            /* Footer height */
+    height: 7rem;           
   } 
 
  
