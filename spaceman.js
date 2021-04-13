@@ -2,23 +2,102 @@
 let remainingTrys = document.querySelector("#chances-remaining");
 
 //word bank array
-wordBank = ["PRESIDENT", "BIGFOOT", "NOTEBOOK", "JAPAN", "Uranus", "DRAKE", "GOLDFISH", "PANCAKE", "CHESS", "SHEEP", "GHOST", "TOOTHBRUSH", "GRANDFATHER", "BASEBALL", "MANUFACTURER", "AMPHIBIAN", "SWITZERLAND", "PAELLA", "VOLKSWAGEN", "HARPSICHORD"];
+// wordBank = ["PRESIDENT", "BIGFOOT", "NOTEBOOK", "JAPAN", "Uranus", "DRAKE", "GOLDFISH", "PANCAKE", "CHESS", "SHEEP", "GHOST", "TOOTHBRUSH", "GRANDFATHER", "BASEBALL", "MANUFACTURER", "AMPHIBIAN", "SWITZERLAND", "PAELLA", "VOLKSWAGEN", "HARPSICHORD"];
 
 //hints array
-hintsArray = ["We have a national holiday dedicated to these people every thrid month in February", "A mythical creature", "There is a famous romance move named after this item", "Known as 'the land of the rising sun'", "The coldest place in our solar system", "This artist has the most 'top 10 hits' on the Billboard charts", "This aquatic animal can see more colors than humans", "This is currently a popular breakfast food whose origins date back to ancient Greece. The Greeks used to call them'tagenias, which translates to 'frying pan'", "A popular board game invented in the 6th century", "This animal has rectangular pupils", "When you need to put together a quick Halloween cosutme, this is always a good bet", "You want to get a new one of these every 3-4 months", "There is a clock named after this particular relative", "Known as 'America's pastime'", "There are about 12 million of these kinds workers in the labor market", "A cold-blooded vertebrate animal", "This country is only about 41,277 sq km. To put that into perspective, California alone is almost 10 times bigger than this place", "A popular Spanish rice dish which traditionally includes chicken or seafood", "This company was founded in 1937 by Adolf Hitler and it is still around today", "A string instrument which was played in the 16th and 17th century, before later being replaced"];
+// hintsArray = ["We have a national holiday dedicated to these people every thrid month in February", "A mythical creature", "There is a famous romance move named after this item", "Known as 'the land of the rising sun'", "The coldest place in our solar system", "This artist has the most 'top 10 hits' on the Billboard charts", "This aquatic animal can see more colors than humans", "This is currently a popular breakfast food whose origins date back to ancient Greece. The Greeks used to call them'tagenias, which translates to 'frying pan'", "A popular board game invented in the 6th century", "This animal has rectangular pupils", "When you need to put together a quick Halloween cosutme, this is always a good bet", "You want to get a new one of these every 3-4 months", "There is a clock named after this particular relative", "Known as 'America's pastime'", "There are about 12 million of these kinds workers in the labor market", "A cold-blooded vertebrate animal", "This country is only about 41,277 sq km. To put that into perspective, California alone is almost 10 times bigger than this place", "A popular Spanish rice dish which traditionally includes chicken or seafood", "This company was founded in 1937 by Adolf Hitler and it is still around today", "A string instrument which was played in the 16th and 17th century, before later being replaced"];
+
+let content = [
+  {
+      word: "PRESIDENT", 
+      hint: "We have a national holiday dedicated to these people every thrid month in February"   
+  },
+  {
+      word: "BIGFOOT", 
+      hint: "A mythical creature"  
+  },
+  {
+      word: "NOTEBOOK", 
+      hint: "There is a famous romance move named after this item"  
+  },
+  {
+      word: "JAPAN", 
+      hint: "Known as 'the land of the rising sun'"  
+  },
+  {
+      word: "URANUS", 
+      hint: "The coldest place in our solar system"  
+  },
+  {
+      word: "DRAKE", 
+      hint: "This artist has the most 'top 10 hits' on the Billboard charts"  
+  },
+  {
+      word: "GOLDFISH", 
+      hint: "This aquatic animal can see more colors than humans" 
+  },
+  {
+      word: "PANCAKE", 
+      hint: "This is a popular breakfast food whose origins date back to ancient Greece. The Greeks used to call them tagenias, which translates to 'frying pan'"
+  },
+  {
+      word: "CHESS", 
+      hint: "A popular board game invented in the 6th century"
+  },
+  {
+      word: "SHEEP", 
+      hint: "This animal has rectangular pupils"
+  },
+  {
+      word: "TOOTHBRUSH", 
+      hint: "You want to get a new one of these every 3-4 months"
+  },
+  {
+      word: "GRANDFATHER", 
+      hint: "There is a clock named after this particular relative"
+  },
+  {
+      word: "BASEBALL", 
+      hint: "Known as 'America's pastime'"
+  },
+  {
+      word: "MANUFACTURER", 
+      hint: "There are about 12 million of these kinds workers in the labor market"
+  },
+  {
+      word: "AMPHIBIAN", 
+      hint: "A cold-blooded vertebrate animal"
+  },
+  {
+      word: "SWITZERLAND", 
+      hint: "This country is only about 41,277 sq km. To put that into perspective, California alone is almost 10 times bigger than this place"
+  },
+  {
+      word: "PAELLA", 
+      hint: "A popular Spanish rice dish which traditionally includes chicken or seafood"
+  },
+  {
+      word: "VOLKSWAGEN", 
+      hint: "This company was founded in 1937 by Adolf Hitler and it is still around today"
+  },
+  {
+      word: "HARPSICHORD", 
+      hint: "A string instrument which was played in the 16th and 17th century, before later being replaced"
+  },
+  ]
 
 //creating buttons for each letter
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-
-// creating alphabet unordered list
 function createButtons() {
-  for (var i = 0; i < alphabet.length; i++) {
+  for (let i = 0; i < alphabet.length; i++) {
   let btn = document.createElement("button");
   btn.setAttribute("id","but" + alphabet[i]);
+  btn.setAttribute("class", "allLetters");
   let t = document.createTextNode(alphabet[i]);
   btn.appendChild(t);
   document.body.appendChild(btn);
+
   }
 }
 createButtons();
@@ -45,7 +124,7 @@ for (i = 0; i < randomWord.length; i++) {
 
 let chances = 10;
 let gameState = document.querySelector("#chancesText");
-gameState.innerHTML = chances;
+gameState.innerHTML = `chances left: ${chances}`;
 
 // Function to determine index/indices of character guess
 const letterButtons = (word, inputChar) => {
@@ -77,7 +156,7 @@ btns.forEach(btn => {
         if (result.length == 0) {
           chances--;
           console.log(`chances left: ${chances}`);
-          gameState.innerHTML = chances;
+          gameState.innerHTML = `chances left: ${chances}`;
           if (chances <= 0) {
             alert("GAME OVER: YOU RAN OUT OF CHANCES");
           }
@@ -104,3 +183,21 @@ btns.forEach(btn => {
   });
 
 });
+
+//Hint Functionality  
+let hint = document.querySelector("#hint");
+
+hint.addEventListener("click", e => {
+  console.log("I need a hint");
+} )
+
+
+
+//Play Again Functionality
+let playAgain = document.querySelector("#replay");
+
+playAgain.addEventListener("click", e => {
+  location.reload();
+  return false;
+  
+})
