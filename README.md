@@ -23,7 +23,15 @@ Wireframe
 
 Gameplay Screenshots
 -------------------------
+
 ![Screen Shot 2021-04-14 at 8 04 40 AM](https://user-images.githubusercontent.com/81011771/114714811-139fe300-9cf8-11eb-86c2-4f9a9dab2062.png)
 
 ![Screen Shot 2021-04-14 at 8 07 12 AM](https://user-images.githubusercontent.com/81011771/114715201-709b9900-9cf8-11eb-90c3-5fec9a4bd196.png)
+
+Obstacles
+---------------------
+
+-The most challenging part of this project was creating the logic for the game; specifically, setting the random guess word as dashes by default and converting the corresponding dashes with the properly guessed letter.
+-Ensuring that I was practicing DRY code which can be scalable.
+-Using CSS to properly format the game and make it dynamic so that everything looks proper across all window sizes.
 
