@@ -41,5 +41,11 @@ Obstacles
 
 Resources
 --------------
-- google.com
+- Google
+
+- Stackoverflow
+
+- W3 Schools
+
+- MDN Webdocs
 
