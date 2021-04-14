@@ -16,3 +16,7 @@ Wireframe
 --------------
 
 <img width="1029" alt="Screen Shot 2021-04-14 at 7 58 40 AM" src="https://user-images.githubusercontent.com/81011771/114713939-3c73a880-9cf7-11eb-8cc0-f5e7f7752732.png">
+
+<img width="1030" alt="Screen Shot 2021-04-14 at 7 59 43 AM" src="https://user-images.githubusercontent.com/81011771/114714084-61681b80-9cf7-11eb-862f-c0fa6cfef27a.png">
+
+<img width="1030" alt="Screen Shot 2021-04-14 at 8 00 04 AM" src="https://user-images.githubusercontent.com/81011771/114714126-6dec7400-9cf7-11eb-8fdb-2d23ad856e86.png">
