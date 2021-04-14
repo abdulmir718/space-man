@@ -33,7 +33,7 @@ Gameplay Screenshots
 Obstacles
 ---------------------
 
-- The most challenging part of this project was creating the logic for the game; specifically, setting the random guess word as dashes by default and converting the corresponding dashes with the properly guessed letter.
+- The most challenging part of this project was creating the logic for the game; specifically, setting the random guess word as dashes by default and converting the corresponding dashes to the properly guessed letter.
 
 - Ensuring that I was practicing DRY code which can be scalable.
 
