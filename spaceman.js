@@ -1,3 +1,4 @@
+//Creating array of objects for the guess word and it's associated hint
 let content = [
   {
     word: "PRESIDENT",
@@ -77,6 +78,7 @@ let content = [
   },
 ];
 
+//Creating buttons for each letter
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 function createButtons() {
@@ -92,10 +94,12 @@ function createButtons() {
 }
 createButtons();
 
+//Randomizing the guess word and it's corresponding everytime the page loads
 let n = Math.floor(Math.random() * content.length);
 let randomSelection = content[n];
 let randomWord = randomSelection.word;
 let randomHint = randomSelection.hint;
+
 
 let selectRandomWord = () => {
   let title = document.querySelector("#guessWordText");
@@ -105,6 +109,7 @@ let selectRandomWord = () => {
 console.log(randomWord);
 selectRandomWord();
 
+//Converting the randomized guess word into dashes by default
 let dashes = ""
 for (i = 0; i < randomWord.length; i++) {
   dashes += "_ ";
@@ -112,11 +117,13 @@ for (i = 0; i < randomWord.length; i++) {
   blanks.innerHTML = dashes;
 }
 
+//Creating a counter to display number of chances remaining
 let chances = 10;
 let gameState = document.querySelector("#chancesText");
 gameState.innerHTML = `chances left: ${chances}`;
 
-const letterButtons = (word, inputChar) => {
+//Function to determine the index/indicies character guess
+const checkCharacterGuess = (word, inputChar) => {
   answer = [];
   for (i = 0; i < word.length; i++) {
     if (word[i] == inputChar) {
@@ -126,11 +133,13 @@ const letterButtons = (word, inputChar) => {
   return answer;
 }
 
+//Function to allow for the editing of strings
 function setCharAt(str, index, chr) {
   if (index > str.length - 1) return str;
   return str.substring(0, index) + chr + str.substring(index + 1);
 }
 
+//Event listeners for all buttons with the class of allLetters
 const btns = document.querySelectorAll("button[class^=allLetters]");
 
 btns.forEach(btn => {
@@ -138,7 +147,7 @@ btns.forEach(btn => {
     if (dashes.includes("_")) {
       if (chances > 0) {
         let inputChar = event.target.id;
-        let result = letterButtons(randomWord, inputChar);
+        let result = checkCharacterGuess(randomWord, inputChar);
         if (result.length == 0) {
           chances--;
           gameState.innerHTML = `chances left: ${chances}`;
@@ -168,7 +177,8 @@ btns.forEach(btn => {
   });
 
 });
- 
+
+//Display hint 
 let hint = document.querySelector("#hint");
 let hintText = document.querySelector("#showHint");
 
@@ -177,6 +187,7 @@ hint.addEventListener("click", e => {
   hintText.innerHTML = `Hint: ${randomHint}`;
 })
 
+// Play again event listener 
 let playAgain = document.querySelector("#replay");
 
 playAgain.addEventListener("click", e => {
