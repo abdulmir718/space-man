@@ -30,7 +30,7 @@ Gameplay Screenshots
 
 ![Screen Shot 2021-04-14 at 8 07 12 AM](https://user-images.githubusercontent.com/81011771/114715201-709b9900-9cf8-11eb-90c3-5fec9a4bd196.png)
 
-Obstacles
+Challenges
 ---------------------
 
 - The most challenging part of this project was creating the logic for the game; specifically, setting the random guess word as dashes by default and converting the corresponding dashes to the properly guessed letter.
