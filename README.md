@@ -20,3 +20,8 @@ Wireframe
 <img width="1030" alt="Screen Shot 2021-04-14 at 7 59 43 AM" src="https://user-images.githubusercontent.com/81011771/114714084-61681b80-9cf7-11eb-862f-c0fa6cfef27a.png">
 
 <img width="1030" alt="Screen Shot 2021-04-14 at 8 00 04 AM" src="https://user-images.githubusercontent.com/81011771/114714126-6dec7400-9cf7-11eb-8fdb-2d23ad856e86.png">
+
+Gameplay Screenshots
+-------------------------
+
+![Screen Shot 2021-04-14 at 8 01 14 AM](https://user-images.githubusercontent.com/81011771/114714306-9a07f500-9cf7-11eb-8df7-8671cdb85ef6.png)
