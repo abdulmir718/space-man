@@ -23,5 +23,7 @@ Wireframe
 
 Gameplay Screenshots
 -------------------------
+![Screen Shot 2021-04-14 at 8 04 40 AM](https://user-images.githubusercontent.com/81011771/114714811-139fe300-9cf8-11eb-86c2-4f9a9dab2062.png)
 
-![Screen Shot 2021-04-14 at 8 01 14 AM](https://user-images.githubusercontent.com/81011771/114714306-9a07f500-9cf7-11eb-8df7-8671cdb85ef6.png)
+![Screen Shot 2021-04-14 at 8 07 12 AM](https://user-images.githubusercontent.com/81011771/114715201-709b9900-9cf8-11eb-90c3-5fec9a4bd196.png)
+
