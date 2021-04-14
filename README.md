@@ -8,11 +8,11 @@ Spaceman s a one-player puzzle game, in which the program will randomly select a
 Users
 ---------------------
 
--People who enjoy playing games
+- People who enjoy playing games
 
--Those who like solving puzzles
+- Those who like solving puzzles
 
--People who enjoy trivia
+- People who enjoy trivia
 
 Wireframe
 --------------
@@ -33,9 +33,13 @@ Gameplay Screenshots
 Obstacles
 ---------------------
 
--The most challenging part of this project was creating the logic for the game; specifically, setting the random guess word as dashes by default and converting the corresponding dashes with the properly guessed letter.
+- The most challenging part of this project was creating the logic for the game; specifically, setting the random guess word as dashes by default and converting the corresponding dashes with the properly guessed letter.
 
--Ensuring that I was practicing DRY code which can be scalable.
+- Ensuring that I was practicing DRY code which can be scalable.
 
--Using CSS to properly format the game and make it dynamic so that everything looks proper across all window sizes.
+- Using CSS to properly format the game and make it dynamic so that everything looks proper across all window sizes.
+
+Resources
+--------------
+- google.com
 
