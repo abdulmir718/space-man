@@ -77,7 +77,6 @@ let content = [
   },
 ];
 
-//creating buttons for each letter
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 function createButtons() {
@@ -88,18 +87,11 @@ function createButtons() {
     let t = document.createTextNode(alphabet[i]);
     btn.appendChild(t);
     document.body.appendChild(btn);
-    // let element = document.getElementsByClassName("alphabet-buttons");
-    // element.appendChild(btn);
-
-    // let newElem = document.createElement("div");
-    // newElem.setAttribute("class", "buttonContainer");
-    // newElem.appendChild(btn);
-
+    
   }
 }
 createButtons();
 
-//select random guess word function
 let n = Math.floor(Math.random() * content.length);
 let randomSelection = content[n];
 let randomWord = randomSelection.word;
@@ -124,7 +116,6 @@ let chances = 10;
 let gameState = document.querySelector("#chancesText");
 gameState.innerHTML = `chances left: ${chances}`;
 
-// Function to determine index/indices of character guess
 const letterButtons = (word, inputChar) => {
   answer = [];
   for (i = 0; i < word.length; i++) {
@@ -135,13 +126,11 @@ const letterButtons = (word, inputChar) => {
   return answer;
 }
 
-// Function to allow for editing of strings
 function setCharAt(str, index, chr) {
   if (index > str.length - 1) return str;
   return str.substring(0, index) + chr + str.substring(index + 1);
 }
 
-// Event listener for all buttons with class of allLetters
 const btns = document.querySelectorAll("button[class^=allLetters]");
 
 btns.forEach(btn => {
@@ -179,8 +168,7 @@ btns.forEach(btn => {
   });
 
 });
-
-//Hint Functionality  
+ 
 let hint = document.querySelector("#hint");
 let hintText = document.querySelector("#showHint");
 
@@ -189,7 +177,6 @@ hint.addEventListener("click", e => {
   hintText.innerHTML = `Hint: ${randomHint}`;
 })
 
-//Play Again Functionality
 let playAgain = document.querySelector("#replay");
 
 playAgain.addEventListener("click", e => {
