@@ -1,4 +1,4 @@
-# Spaceman
+# SPACEMAN
 
 Introduction
 ---------------------
