@@ -1,4 +1,4 @@
-# Spaceman - Project 1
+# Spaceman
 
 Introduction
 ---------------------
